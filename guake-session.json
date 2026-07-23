@@ -1,0 +1,160 @@
+{
+    "schema_version": 2,
+    "timestamp": 1784768955,
+    "workspace": {
+        "0": [
+            [
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "初號機",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "零號機",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "快救我啊",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "柏德之門",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "龍與地下城",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "戰鎚40K",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "紅蓮哥吉拉",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "王者基多拉",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/terminal-settings-backup",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "哥吉拉大戰金剛",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "庫巴大魔王11",
+                    "custom_label_set": true
+                }
+            ]
+        ]
+    }
+}
