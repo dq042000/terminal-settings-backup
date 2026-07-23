@@ -2,6 +2,10 @@
 
 終端機設定備份，可在新機器上一鍵還原。內容包含 GNOME Terminal 與 Guake 的設定、Guake 分頁 session，以及 Meslo Nerd Font 字型。
 
+## 預覽
+
+![終端機風格預覽](screenshots/terminal-style.jpeg)
+
 ## 內容
 
 | 檔案 / 資料夾 | 說明 |
@@ -12,6 +16,7 @@
 | `guake.dconf` | Guake 設定（`dconf` 匯出） |
 | `guake-session.json` | Guake 分頁 session（分頁清單與工作目錄） |
 | `fonts/` | Meslo Nerd Font 字型檔（`.ttf`） |
+| `screenshots/` | 風格預覽截圖 |
 
 ## 設定重點
 
