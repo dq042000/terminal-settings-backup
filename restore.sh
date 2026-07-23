@@ -5,10 +5,22 @@ set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "==> 1/4 安裝 Meslo Nerd Font"
+echo "==> 1/4 安裝字型（Meslo Nerd Font + Symbola）"
 mkdir -p "$HOME/.fonts"
 cp -f "$DIR/fonts/"* "$HOME/.fonts/"
+
+# 安裝 Symbola 以補齊 Claude Code 模式指示器符號 (U+23F5 ⏵)
+if ! fc-list ':charset=23f5' 2>/dev/null | grep -q .; then
+  if command -v apt-get >/dev/null 2>&1; then
+    echo "    安裝 fonts-symbola（缺 U+23F5 符號）..."
+    sudo apt-get install -y fonts-symbola || echo "    警告：Symbola 安裝失敗，⏵ 符號可能顯示異常"
+  else
+    echo "    略過 Symbola：非 apt 系統，請手動安裝含 U+23F5 的符號字型"
+  fi
+fi
+
 fc-cache -f "$HOME/.fonts" >/dev/null
+fc-cache -f >/dev/null
 echo "    字型安裝完成"
 
 echo "==> 2/4 還原 GNOME Terminal 設定"

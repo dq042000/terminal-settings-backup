@@ -38,7 +38,7 @@ show-hide='F10'
 toggle-fullscreen='disabled'
 
 [style/background]
-transparency=92
+transparency=89
 
 [style/font]
 allow-bold=true

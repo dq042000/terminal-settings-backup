@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1784768955,
+    "timestamp": 1784768978,
     "workspace": {
         "0": [
             [
@@ -151,7 +151,7 @@
                             }
                         }
                     ],
-                    "label": "庫巴大魔王11",
+                    "label": "庫巴大魔王",
                     "custom_label_set": true
                 }
             ]
