@@ -55,4 +55,9 @@ gh release create "$VERSION" "$ASSET" \
 
 echo ""
 echo "完成：Release $VERSION 已發佈"
+
+echo "==> 清理本機打包檔"
+rm -f "$HOME"/terminal-settings-*.tar.gz
+echo "    已刪除 terminal-settings-*.tar.gz"
+
 gh release view "$VERSION" --web >/dev/null 2>&1 || true
