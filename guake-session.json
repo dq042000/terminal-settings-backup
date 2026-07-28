@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1785219521,
+    "timestamp": 1785228583,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/contest",
+                            "directory": "/home/dq042000/web/sms",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -17,6 +17,21 @@
                         }
                     ],
                     "label": "初號機",
+                    "custom_label_set": true
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/dq042000/web",
+                            "custom_colors": {
+                                "fg_color": null,
+                                "bg_color": null,
+                                "palette": null
+                            }
+                        }
+                    ],
+                    "label": "零號機",
                     "custom_label_set": true
                 },
                 {
