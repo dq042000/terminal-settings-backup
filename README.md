@@ -58,8 +58,9 @@ GNOME Terminal 開新分頁／視窗即可看到新風格。
 需先安裝並登入 [GitHub CLI](https://cli.github.com/)（`gh auth login`）。在本資料夾內執行：
 
 ```bash
-./release.sh v1.0.0                        # release notes 自動產生
-./release.sh v1.1.0 "修正 Guake 透明度"     # 額外附上本版變更說明
+./release.sh                               # 依上一版後的 commit 自動決定版本
+./release.sh "修正 Guake 透明度"            # 自動版本 + 額外附上本版變更說明
+./release.sh v1.1.0 "修正 Guake 透明度"     # 手動指定版本
 ```
 
-腳本會依序：確認工作區無未提交變更並 push → 執行 `export.sh` 打包 → 建立 tag → 以 `gh release create` 發佈 Release 並上傳 tar.gz 附件。release notes 由固定說明、傳入的變更說明，以及 `--generate-notes` 自動產生的 commit 清單組成。
+不指定版本時，依上一個 tag 之後的 commit 類型自動遞增：含 `BREAKING CHANGE` 跳 major、含 `feat:` 跳 minor、其餘（fix/docs/chore…）跳 patch。腳本會依序：確認工作區無未提交變更並 push → 執行 `export.sh` 打包 → 建立 tag → 以 `gh release create` 發佈 Release 並上傳 tar.gz 附件。release notes 由固定說明、傳入的變更說明，以及 `--generate-notes` 自動產生的 commit 清單組成。

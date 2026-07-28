@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1784768978,
+    "timestamp": 1785219312,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web",
+                            "directory": "/home/dq042000/web/contest",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -23,22 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web",
-                            "custom_colors": {
-                                "fg_color": null,
-                                "bg_color": null,
-                                "palette": null
-                            }
-                        }
-                    ],
-                    "label": "零號機",
-                    "custom_label_set": true
-                },
-                {
-                    "panes": [
-                        {
-                            "type": "term",
-                            "directory": "/home/dq042000/web",
+                            "directory": "/home/dq042000/web/temp/my-project",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -113,7 +98,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000",
+                            "directory": "/home/dq042000/web",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -128,7 +113,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/terminal-settings-backup",
+                            "directory": "/home/dq042000",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -143,7 +128,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000",
+                            "directory": "/home/dq042000/terminal-settings-backup",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,

@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # 建立 GitHub Release：打包備份 -> 建立 tag -> 發佈 Release 並上傳附件
-# 用法：在本資料夾內執行 ./release.sh <版本號>
-#   ./release.sh v1.0.0
-#   ./release.sh v1.1.0 "修正 Guake 透明度設定"   # 第二參數為額外說明（可省略）
+# 用法：在本資料夾內執行 ./release.sh [版本號] [額外說明]
+#   ./release.sh                              # 依上一版後的 commit 自動決定版本
+#                                             #   BREAKING CHANGE→major、feat→minor、其餘→patch
+#   ./release.sh "修正 Guake 透明度設定"       # 自動版本 + 額外說明
+#   ./release.sh v1.1.0 "修正 Guake 透明度設定" # 手動指定版本
 set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -10,14 +12,31 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VERSION="${1:-}"
 EXTRA_NOTE="${2:-}"
 
-if [ -z "$VERSION" ]; then
-  echo "錯誤：請提供版本號，例如 ./release.sh v1.0.0" >&2
-  exit 1
+# 第一參數不是 vX.Y.Z 格式時，視為額外說明，版本號改為自動判斷
+if [ -n "$VERSION" ] && ! [[ "$VERSION" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+  EXTRA_NOTE="$VERSION"
+  VERSION=""
 fi
 
 # 前置檢查
 command -v gh >/dev/null 2>&1 || { echo "錯誤：未安裝 gh (GitHub CLI)" >&2; exit 1; }
 gh auth status >/dev/null 2>&1 || { echo "錯誤：gh 未登入，請先執行 gh auth login" >&2; exit 1; }
+
+if [ -z "$VERSION" ]; then
+  LAST_TAG="$(git -C "$DIR" tag --sort=-v:refname | head -1)"
+  [ -n "$LAST_TAG" ] || { echo "錯誤：找不到既有 tag，請手動指定版本，例如 ./release.sh v1.0.0" >&2; exit 1; }
+  COMMITS="$(git -C "$DIR" log "$LAST_TAG"..HEAD --pretty='%s%n%b')"
+  [ -n "$COMMITS" ] || { echo "錯誤：$LAST_TAG 之後沒有新 commit，無需發佈" >&2; exit 1; }
+  IFS=. read -r MAJOR MINOR PATCH <<< "${LAST_TAG#v}"
+  if echo "$COMMITS" | grep -qE '^[a-z]+(\([^)]*\))?!:|^BREAKING CHANGE'; then
+    VERSION="v$((MAJOR + 1)).0.0"
+  elif echo "$COMMITS" | grep -qE '^feat(\([^)]*\))?:'; then
+    VERSION="v$MAJOR.$((MINOR + 1)).0"
+  else
+    VERSION="v$MAJOR.$MINOR.$((PATCH + 1))"
+  fi
+  echo "==> 自動判斷版本：$LAST_TAG -> $VERSION"
+fi
 
 if git -C "$DIR" rev-parse "$VERSION" >/dev/null 2>&1; then
   echo "錯誤：tag $VERSION 已存在" >&2

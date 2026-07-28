@@ -15,6 +15,7 @@ default-size-columns=114
 default-size-rows=24
 font='MesloLGLDZ Nerd Font 12'
 foreground-color='#CCCCCC'
+highlight-colors-set=false
 palette=['#000000', '#CD3131', '#0DBC79', '#E5E510', '#2472C8', '#BC3FBC', '#11A8CD', '#E5E5E5', '#666666', '#F14C4C', '#23D18B', '#F5F543', '#3B8EEA', '#D670D6', '#29B8DB', '#E5E5E5']
 use-system-font=false
 use-theme-colors=false
