@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1785219312,
+    "timestamp": 1785219521,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/temp/my-project",
+                            "directory": "/home/dq042000/web",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
