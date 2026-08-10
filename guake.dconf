@@ -37,7 +37,7 @@ window-width=65
 show-hide='F10'
 
 [keybindings/local]
-toggle-fullscreen='disabled'
+toggle-fullscreen='F12'
 
 [style/background]
 transparency=89
