@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1785228634,
+    "timestamp": 1786330715,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web",
+                            "directory": "/home/dq042000/web/tc-gaizan",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -16,7 +16,7 @@
                             }
                         }
                     ],
-                    "label": "初號機",
+                    "label": "我這邊正常",
                     "custom_label_set": true
                 },
                 {
@@ -31,7 +31,7 @@
                             }
                         }
                     ],
-                    "label": "零號機",
+                    "label": "快好了",
                     "custom_label_set": true
                 },
                 {
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "快救我啊",
+                    "label": "應該是快取",
                     "custom_label_set": true
                 },
                 {
@@ -61,7 +61,7 @@
                             }
                         }
                     ],
-                    "label": "柏德之門",
+                    "label": "環境問題",
                     "custom_label_set": true
                 },
                 {
@@ -76,7 +76,7 @@
                             }
                         }
                     ],
-                    "label": "龍與地下城",
+                    "label": "等一下",
                     "custom_label_set": true
                 },
                 {
@@ -91,7 +91,7 @@
                             }
                         }
                     ],
-                    "label": "戰鎚40K",
+                    "label": "昨天還好好的",
                     "custom_label_set": true
                 },
                 {
@@ -106,7 +106,7 @@
                             }
                         }
                     ],
-                    "label": "紅蓮哥吉拉",
+                    "label": "我沒動",
                     "custom_label_set": true
                 },
                 {
@@ -121,7 +121,7 @@
                             }
                         }
                     ],
-                    "label": "王者基多拉",
+                    "label": "可能是網路",
                     "custom_label_set": true
                 },
                 {
@@ -136,7 +136,7 @@
                             }
                         }
                     ],
-                    "label": "哥吉拉大戰金剛",
+                    "label": "先重開",
                     "custom_label_set": true
                 },
                 {
@@ -151,7 +151,7 @@
                             }
                         }
                     ],
-                    "label": "庫巴大魔王",
+                    "label": "之後再修",
                     "custom_label_set": true
                 }
             ]
