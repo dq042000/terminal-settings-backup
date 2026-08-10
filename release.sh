@@ -22,6 +22,9 @@ fi
 command -v gh >/dev/null 2>&1 || { echo "錯誤：未安裝 gh (GitHub CLI)" >&2; exit 1; }
 gh auth status >/dev/null 2>&1 || { echo "錯誤：gh 未登入，請先執行 gh auth login" >&2; exit 1; }
 
+# 同步遠端 tag，否則版本判斷只看得到本機 tag，會算出遠端已存在的版本號
+git -C "$DIR" fetch --tags --prune origin
+
 if [ -z "$VERSION" ]; then
   LAST_TAG="$(git -C "$DIR" tag --sort=-v:refname | head -1)"
   [ -n "$LAST_TAG" ] || { echo "錯誤：找不到既有 tag，請手動指定版本，例如 ./release.sh v1.0.0" >&2; exit 1; }
@@ -52,6 +55,8 @@ fi
 git -C "$DIR" push origin HEAD
 
 echo "==> 2/3 打包備份"
+# 打包前就掛上清理，任何一步失敗中止時才不會把 tar.gz 留在家目錄
+trap 'rm -f "$HOME"/terminal-settings-*.tar.gz; echo "==> 已清理本機打包檔"' EXIT
 "$DIR/export.sh"
 ASSET="$(ls -t "$HOME"/terminal-settings-*.tar.gz 2>/dev/null | head -1)"
 [ -n "$ASSET" ] || { echo "錯誤：找不到打包檔 terminal-settings-*.tar.gz" >&2; exit 1; }
@@ -74,9 +79,5 @@ gh release create "$VERSION" "$ASSET" \
 
 echo ""
 echo "完成：Release $VERSION 已發佈"
-
-echo "==> 清理本機打包檔"
-rm -f "$HOME"/terminal-settings-*.tar.gz
-echo "    已刪除 terminal-settings-*.tar.gz"
 
 gh release view "$VERSION" --web >/dev/null 2>&1 || true
