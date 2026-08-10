@@ -23,9 +23,5 @@ echo "==> 同步 Meslo 字型"
 mkdir -p "$DIR/fonts"
 cp -f "$HOME"/.fonts/Meslo* "$DIR/fonts/" 2>/dev/null || true
 
-echo "==> 重新打包"
-TS=$(date +%Y%m%d)
-tar czf "$HOME/terminal-settings-${TS}.tar.gz" -C "$HOME" terminal-settings-backup
-
 echo ""
-echo "完成：$HOME/terminal-settings-${TS}.tar.gz"
+echo "完成：設定已更新到本資料夾，請 git commit 後 push"

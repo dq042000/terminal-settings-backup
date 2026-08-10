@@ -11,8 +11,7 @@
 | 檔案 / 資料夾 | 說明 |
 | --- | --- |
 | `restore.sh` | 一鍵還原腳本（安裝字型 + 載入設定 + 還原分頁 + 重啟 Guake） |
-| `export.sh` | 一鍵匯出腳本（重新匯出目前設定並打包成 tar.gz） |
-| `release.sh` | 一鍵發佈腳本（打包 + 建立 tag + 發佈 GitHub Release 並上傳附件） |
+| `export.sh` | 一鍵匯出腳本（重新匯出目前設定到本資料夾） |
 | `gnome-terminal.dconf` | GNOME Terminal 設定（`dconf` 匯出） |
 | `guake.dconf` | Guake 設定（`dconf` 匯出） |
 | `guake-session.json` | Guake 分頁 session（分頁清單與工作目錄） |
@@ -31,6 +30,7 @@
 在本資料夾內執行：
 
 ```bash
+git pull
 ./restore.sh
 ```
 
@@ -49,18 +49,10 @@ GNOME Terminal 開新分頁／視窗即可看到新風格。
 
 ```bash
 ./export.sh
+git commit -am "chore: 更新終端機設定備份"
+git push
 ```
 
-腳本會重新匯出 GNOME Terminal 與 Guake 設定、備份 Guake 分頁 session、同步 Meslo 字型，並打包成 `~/terminal-settings-<日期>.tar.gz`。
+`export.sh` 會重新匯出 GNOME Terminal 與 Guake 設定、備份 Guake 分頁 session、同步 Meslo 字型到本資料夾，接著以 git 提交推送即完成備份。
 
-## 發佈到 GitHub Releases
-
-需先安裝並登入 [GitHub CLI](https://cli.github.com/)（`gh auth login`）。在本資料夾內執行：
-
-```bash
-./release.sh                               # 依上一版後的 commit 自動決定版本
-./release.sh "修正 Guake 透明度"            # 自動版本 + 額外附上本版變更說明
-./release.sh v1.1.0 "修正 Guake 透明度"     # 手動指定版本
-```
-
-不指定版本時，依上一個 tag 之後的 commit 類型自動遞增：含 `BREAKING CHANGE` 跳 major、含 `feat:` 跳 minor、其餘（fix/docs/chore…）跳 patch。腳本會依序：確認工作區無未提交變更並 push → 執行 `export.sh` 打包 → 建立 tag → 以 `gh release create` 發佈 Release 並上傳 tar.gz 附件。release notes 由固定說明、傳入的變更說明，以及 `--generate-notes` 自動產生的 commit 清單組成。
+本 repo 本身就是備份，不另外產生打包檔：`git clone` 或 `git pull` 取得的內容即可直接還原。若要還原到某個歷史版本，`git checkout <tag>` 後再執行 `./restore.sh`。
