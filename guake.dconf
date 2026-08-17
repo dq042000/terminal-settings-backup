@@ -25,12 +25,12 @@ use-scrollbar=true
 use-trayicon=true
 use-vte-titles=false
 window-halignment=1
-window-height=65
+window-height=75
 window-horizontal-displacement=144
 window-losefocus=false
 window-refocus=true
 window-tabbar=true
-window-vertical-displacement=160
+window-vertical-displacement=120
 window-width=65
 
 [keybindings/global]

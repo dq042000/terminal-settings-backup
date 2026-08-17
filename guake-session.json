@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1786338571,
+    "timestamp": 1786927146,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/sms",
+                            "directory": "/home/dq042000/web/tc-gaizan",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/csp_sport",
+                            "directory": "/home/dq042000/web/csp_app_settings",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -113,7 +113,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web",
+                            "directory": "/home/dq042000",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
