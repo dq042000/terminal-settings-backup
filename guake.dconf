@@ -10,6 +10,7 @@ load-guake-yml=true
 max-tab-name-length=100
 mouse-display=true
 open-tab-cwd=true
+prompt-on-close-tab=2
 prompt-on-quit=true
 quick-open-command-line='gedit %(file_path)s'
 restore-tabs-notify=true
@@ -25,7 +26,7 @@ use-scrollbar=true
 use-trayicon=true
 use-vte-titles=false
 window-halignment=1
-window-height=75
+window-height=71
 window-horizontal-displacement=144
 window-losefocus=false
 window-refocus=true
@@ -37,10 +38,11 @@ window-width=65
 show-hide='F10'
 
 [keybindings/local]
+close-tab='disabled'
 toggle-fullscreen='F12'
 
 [style/background]
-transparency=89
+transparency=91
 
 [style/font]
 allow-bold=true

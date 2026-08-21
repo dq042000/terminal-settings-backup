@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1786927146,
+    "timestamp": 1787272778,
     "workspace": {
         "0": [
             [
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/csp_app_settings",
+                            "directory": "/home/dq042000/web/tc-gaizan",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
