@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1787272778,
+    "timestamp": 1788933599,
     "workspace": {
         "0": [
             [
@@ -46,7 +46,7 @@
                             }
                         }
                     ],
-                    "label": "應該是快取",
+                    "label": "環境問題",
                     "custom_label_set": true
                 },
                 {
@@ -61,7 +61,7 @@
                             }
                         }
                     ],
-                    "label": "環境問題",
+                    "label": "應該是快取",
                     "custom_label_set": true
                 },
                 {
@@ -128,7 +128,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000",
+                            "directory": "/home/dq042000/terminal-settings-backup",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -143,7 +143,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/terminal-settings-backup",
+                            "directory": "/home/dq042000",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,

@@ -1,5 +1,6 @@
 [general]
 compat-delete='delete-sequence'
+copy-on-select=true
 display-n=0
 display-tab-names=0
 fullscreen-hide-tabbar=false
@@ -26,7 +27,7 @@ use-scrollbar=true
 use-trayicon=true
 use-vte-titles=false
 window-halignment=1
-window-height=71
+window-height=69
 window-horizontal-displacement=144
 window-losefocus=false
 window-refocus=true
@@ -42,7 +43,7 @@ close-tab='disabled'
 toggle-fullscreen='F12'
 
 [style/background]
-transparency=91
+transparency=87
 
 [style/font]
 allow-bold=true
