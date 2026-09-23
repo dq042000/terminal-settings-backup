@@ -43,7 +43,7 @@ close-tab='disabled'
 toggle-fullscreen='F12'
 
 [style/background]
-transparency=87
+transparency=85
 
 [style/font]
 allow-bold=true
