@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1790122181,
+    "timestamp": 1791769418,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/csp_webview",
+                            "directory": "/home/dq042000/web/contest",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -23,7 +23,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web/csp_webview",
+                            "directory": "/home/dq042000/web/contest",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -38,7 +38,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web",
+                            "directory": "/home/dq042000/web/contest",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -53,7 +53,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/web",
+                            "directory": "/home/dq042000/web/tc-gaizan",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -128,7 +128,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000/terminal-settings-backup",
+                            "directory": "/home/dq042000",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,
@@ -143,7 +143,7 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/dq042000",
+                            "directory": "/home/dq042000/.config/guake",
                             "custom_colors": {
                                 "fg_color": null,
                                 "bg_color": null,

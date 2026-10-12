@@ -27,7 +27,7 @@ use-scrollbar=true
 use-trayicon=true
 use-vte-titles=false
 window-halignment=1
-window-height=69
+window-height=63
 window-horizontal-displacement=144
 window-losefocus=false
 window-refocus=true
@@ -41,6 +41,7 @@ show-hide='F10'
 [keybindings/local]
 close-tab='disabled'
 toggle-fullscreen='F12'
+toggle-transparency='<Control><Shift>F2'
 
 [style/background]
 transparency=85
